@@ -1,0 +1,124 @@
+.hero-banner {
+    background-image: url('assets/home.png');
+    background-size: cover;
+    background-position: center;
+    height: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    padding: 0 20px;
+    color: white;
+}
+
+.hero-banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.45); /* dark overlay for readability */
+}
+
+.hero-text {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    font-family: 'Playfair Display', serif;
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.hero-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.faq-section {
+    padding: 80px 40px;
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    font-family: 'Playfair Display', serif;
+}
+
+.faq-container {
+    max-width: 1100px;
+    display: flex;
+    gap: 60px;
+    width: 100%;
+}
+
+.faq-left {
+    flex: 1;
+}
+
+.faq-left h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.faq-left h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.faq-left p {
+    color: #555;
+}
+
+.faq-right {
+    flex: 1.2;
+}
+
+.faq-item {
+    border-bottom: 1px solid #ddd;
+}
+
+.faq-question {
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    padding: 15px 0;
+    cursor: pointer;
+    font-weight: bold;
+    position: relative;
+}
+
+.faq-question::after {
+    content: "▼";
+    float: right;
+    transition: transform 0.3s;
+}
+
+.faq-answer {
+    display: none;
+    padding: 0 0 15px;
+    color: #333;
+}
+
+.faq-answer.open {
+    display: block;
+}
+
+.faq-question.active::after {
+    transform: rotate(180deg);
+}
+
+.faq-left p {
+    font-family: 'Poppins', sans-serif;
+}
+
+.faq-question,
+.faq-answer p {
+    font-family: 'Poppins', sans-serif;
+}
