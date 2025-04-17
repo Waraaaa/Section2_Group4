@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Figures</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="customer.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<!-- This is Navbar -->
+<body>
+    <div class="top-bar">Free Returns and Standard Shipping</div>
+    <header class="navbar"> <br>
+        <div class="logo"> <img src="assets/logo.png" alt="Logo" style="width: 100px; height: auto;"> </div> <br>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Customize</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="#">Manage Product</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+        </div>
+        <div class="account-cart">
+            <a href="#" class="cart-icon"><i class="fas fa-shopping-bag"></i> My Cart</a>
+            <a href="#" class="account-icon"><i class="fas fa-user"></i> Account Name</a>
+        </div>
+        <button class="contact-btn">Contact Us</button>
+    </header>
+    
+    <section class="hero-banner">
+        <div class="hero-text">
+            <h1>"Bring Your Imagination to Life"</h1>
+            <p>
+                Bring your imagination to life with our premium custom figure services.
+                Whether you have a detailed design in mind or need assistance crafting
+                your perfect character, we provide expert customization to match your vision.
+                From dynamic poses to intricate details, every figure is crafted with precision,
+                ensuring high-quality results that reflect your unique style.
+            </p>
+        </div>
+    </section>
+
+    <main class="customize-container">
+        <h1>Let's Start Customizing :D</h1>
+        <p class="description">
+            Great stories have a personality. Consider telling a great story that provides personality. 
+            Writing a story with personality for potential clients will assist with making a relationship connection. 
+            This shows up in small quirks like word choices or phrases. Write from your point of view, 
+            not from someone else experience.
+        </p>
+    
+        <form class="customize-form">
+            <div class="form-group">
+                <label for="lineID">Line ID *</label>
+                <input type="text" id="lineID" name="lineID" required value="lineidsince2005">
+            </div>
+            
+            <div class="form-group">
+                <label>Product Type *</label>
+                <div class="input-field">
+                    <label><input type="radio" name="productType" value="Figure" required> Figure</label>
+                    <label><input type="radio" name="productType" value="Art Toy"> Art Toy</label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="mainTheme">Main Theme *</label>
+                <input type="text" id="mainTheme" name="mainTheme" placeholder="Enter your main theme here" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="details">Customization Detail *</label>
+                <textarea id="details" name="details" required></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="design">Attach Your Design</label>
+                <div class="input-field">
+                    <input type="file" id="design" name="design" multiple>
+                    <small>(If there is any. Maximum at 3 GB and at most 5 files.)</small>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>Packaging Type *</label>
+                <div class="input-field">
+                    <label><input type="radio" name="packaging" value="Standard" required> Standard</label>
+                    <label><input type="radio" name="packaging" value="Premium"> Premium</label>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <div class="empty-label"></div>
+                <button type="submit" class="submit-btn">Submit</button>
+            </div>
+            
+        </form>
+    </main>
+    
+
+    <footer>
+        <p>© 2025 Custom Figures. All rights reserved.</p>
+    </footer>
+</body>
+</html>
