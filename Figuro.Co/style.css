@@ -1,0 +1,372 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333;
+}
+
+/* ------------------------------ */
+
+.top-bar {
+    background-color: #222; /* You can keep or adjust this if you want */
+    color: #ffffff; /* This sets the text color to #222 */
+    text-align: center;
+    padding: 10px;
+    font-size: 1em;
+}
+
+/* ------------------------------ */
+
+div{
+    text-align: center;
+}
+
+/* ------------------------------ */
+
+/* Hero Section */
+.s_kickoff {
+    text-align: center;
+    padding: 80px 20px;
+    color: white;
+    background-size: cover;
+}
+
+.s_kickoff h1 {
+    font-family: 'Playfair Display', serif; /* Add this line */
+    font-size: 2.5em;
+}
+
+h3 {
+    font-family: 'Playfair Display', serif; /* Add this line */
+    font-size: 16px;
+    text-align: center;
+    color: #222;
+    margin-bottom: 3%;
+}
+
+
+h2 {
+    font-family: 'Playfair Display', serif; /* Add this line */
+    font-size: 36px;
+    text-align: center;
+    color: #222;
+}
+
+/* ------------------------------ */
+
+.search-bar {
+    position: relative;
+    display: inline-block;
+    width: 300px;
+    margin: 10px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 1em;
+    border: 2px solid #ccc; /* Light gray border */
+    border-radius: 25px; /* Rounded corners */
+    outline: none; /* Remove default outline on focus */
+    transition: all 0.3s ease; /* Smooth transition for hover/focus effects */
+}
+
+.search-bar input:focus {
+    border-color: #950000; /* Change border color on focus */
+    box-shadow: 0 0 8px rgba(149, 0, 0, 0.5); /* Add a subtle shadow on focus */
+}
+
+.search-bar input::placeholder {
+    color: #aaa; /* Lighter placeholder color */
+    font-style: italic; /* Italicize the placeholder text */
+}
+
+.search-bar input:hover {
+    border-color: #222; /* Darken border on hover */
+    background-color: #f9f9f9; /* Light background color change on hover */
+}
+
+/* ------------------------------ */
+
+.contact-btn {
+    background-color: #222; /* Button background color */
+    color: white; /* Text color */
+    font-size: 1em;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 30px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    display: inline-block; /* Keep the button inline */
+    text-align: center; /* Center text inside button */
+}
+
+.contact-btn:hover {
+    background-color: #222; /* Darken the background color on hover */
+    color: #fff; /* Keep the text color white */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
+}
+
+.contact-btn:active {
+    background-color: #950000; /* Slightly darker on active state */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Smaller shadow when clicked */
+}
+
+.contact-btn:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 8px rgba(149, 0, 0, 0.5); /* Add a focus shadow */
+}
+
+/* ------------------------------ */
+
+/* Background */
+.s_kickoff {
+    position: relative; /* Needed for the overlay */
+    background-image: url('/web/image/website.s_kickoff_default_image'); /* Existing background image */
+    background-position: 100% 100%;
+    background-size: cover;
+}
+
+.s_kickoff::before {
+    content: ''; /* Creates an empty element */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/home.png'); /* Your overlay image */
+    background-position: center;
+    background-size: cover; /* Ensure the image covers the entire section */
+    opacity: 1; /* 100% opacity for the image */
+    background-color: rgba(16, 16, 16, 0.50); /* 50% opacity for the dark color overlay */
+    background-blend-mode: multiply;
+    z-index: 1; /* Make sure the overlay is above the background but below the content */
+}
+
+.s_kickoff .container {
+    position: relative; /* Make sure the content is above the overlay */
+    z-index: 2; /* Ensure the content stays above the overlay */
+}
+
+.s_kickoff .lead, .s_kickoff .display-1 {
+    position: relative;
+    z-index: 2; /* Keep the text on top of the overlay */
+}
+
+.display-1 {
+    font-size: 78px;
+    text-align: left;
+    margin-left: 10%;
+}
+
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px 20px;
+    background-color: #ffffff;
+    color: rgb(48, 48, 48);
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: rgb(48, 48, 48);
+    text-decoration: none;
+}
+
+/* ------------------------------ */
+
+.account-cart a {
+    color: rgb(48, 48, 48);
+    margin-left: 15px;
+}
+
+/* Hero Section */
+.s_kickoff {
+    text-align: center;
+    padding: 80px 20px;
+    color: white;
+    background-size: cover;
+}
+
+.s_kickoff h1 {
+    font-size: 2.5em;
+}
+
+/* Popular Designs */
+.popular-designs {
+    text-align: center;
+    padding: 40px 20px;
+    margin-bottom: 8%;
+}
+
+.design-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.design-card img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Process Steps */
+.process {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #222;
+}
+
+.process h2 {
+    font-size: 2em;
+    color: #ffffff;
+    margin-bottom: 40px;
+}
+
+.steps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    text-align: center;
+}
+
+.step span {
+    background-color: #C0392B; /* Red shade */
+    color: rgb(255, 255, 255);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    font-weight: bold;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Text under steps */
+.step div {
+    color: #ffffff;
+    line-height: 1.5;
+}
+
+
+/* Customize Call */
+.customize-call {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #950000;
+    color: white;
+}
+
+.customize-call h2{
+    color: #fff;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+.customize-call button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #fff;
+    color: #950000;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Materials */
+.materials {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #ddd;
+}
+
+.material-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.material {
+    background: #555;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    color: white;
+}
+
+.materials {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #fff;
+}
+
+.materials h2{
+    margin-bottom: 40px;
+}
+
+.material-list {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    flex-wrap: wrap;
+}
+
+.material {
+    text-align: center;
+    max-width: 200px;
+    background-color: transparent;
+}
+
+.material img {
+    width: 200px; /* Adjust size as needed */
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%; /* Makes the images circular */
+}
+
+.material h3 {
+    font-size: 18px;
+    margin: 25px 0;
+}
+
+.material p {
+    font-size: 14px;
+    color: #555;
+    margin: 25px 0;
+}
+
