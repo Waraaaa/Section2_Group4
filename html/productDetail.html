@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Figures</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/productDetail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="top-bar">Free Returns and Standard Shipping</div>
+    <header class="navbar">
+        <div class="logo">
+            <img src="/assets/logo.png" alt="Logo" style="width: 100px; height: auto;">
+        </div>
+        <nav id="navbar">
+            <ul>
+                <li><a href="/home" class="active">Home</a></li>
+                <li><a href="/shop">Shop</a></li>
+                <li><a href="/customize">Customize</a></li>
+                <li><a href="/FAQ">FAQ</a></li>
+                <li><a href="/team">Team</a></li>
+            </ul>
+    </nav>
+        <!-- <div class="search-bar">
+            <input type="text" placeholder="Search...">
+        </div> -->
+        <div class="account-cart">
+            <a href="/cart" class="cart-icon"><i class="fas fa-shopping-bag"></i> My Cart</a>
+            <div class="account-dropdown">
+                <a href="/login" id="accountName" class="account-icon">
+                    <i class="fas fa-user"></i> Sign-In
+                </a>
+                <div id="accountMenu" class="dropdown-menu" style="display: none;">
+                    <a href="#" id="logoutBtn">Logout</a>
+                    <a href="#" id="deleteAccountBtn">Delete Account</a>
+                </div>
+            </div>
+        </div>
+        <button class="contact-btn">Contact Us</button>
+    </header>
+
+    <div class="back-button">
+        <a href="/shop">&larr; Back</a>
+    </div>
+    
+    <div class="product-detail-container">
+        <!-- Left Section -->
+        <div class="left-section">
+            <img id="main-product-image" src="" alt="Main product image">
+            <div class="thumbnail-row" style="display: none;">
+                <!-- Thumbnails will be added dynamically here -->
+            </div>
+        </div>
+        
+        <!-- Right Section -->
+        <div class="right-section">
+            <h1 id="product-name"></h1>
+            <div class="price" id="product-price"></div>
+            <div class="rating-stock">
+                <span id="product-rating"></span>
+                <span id="product-stock"></span>
+            </div>
+            <div class="product-description" id="product-description"></div>
+            <div>Type: <span id="product-type"></span></div>
+    
+            <!-- Quantity Selector -->
+            <div class="quantity-selector">
+                <label>Quantity:</label>
+                <input type="number" class="quantity-box" value="1" />
+                <button>+</button>
+            </div>
+    
+            <div>Category:</div>
+            <div class="category-tags" id="product-categories">
+                <!-- Categories will be filled here -->
+            </div>
+    
+            <button class="add-to-cart-btn" data-sku="">Add to Cart</button>
+        </div>
+    </div>
+    
+    <!-- Reviews -->
+    <div class="review-section">
+        <h2>Reviews <span style="font-weight: normal;" id="review-count"></span></h2>
+        <div id="reviews-container">
+            <!-- Reviews will be dynamically inserted here -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Custom Figures. All rights reserved.</p>
+    </footer>
+
+    <script src="/script/productDetail.js"></script>
+    <script src="/script/checkLogin.js"></script>
+    <script src="/script/DeleteLogout.js"></script>
+    <script src="/script/admin_check.js"></script>
+    <script src="/script/addToCart.js"></script>
+     <!-- <script>
+        document.querySelector('.right-section h1').textContent = "Product1";
+     </script> -->
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Figures</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="top-bar">Free Returns and Standard Shipping</div>
+    <header class="navbar">
+        <div class="logo"> <img src="assets/logo.png" alt="Logo" style="width: 100px; height: auto;"> </div>
+        <nav id="navbar">
+            <ul>
+                <li><a href="/home" class="active">Home</a></li>
+                <li><a href="/shop">Shop</a></li>
+                <li><a href="/customize">Customize</a></li>
+                <li><a href="/FAQ">FAQ</a></li>
+                <li><a href="/team">Team</a></li>
+            </ul>
+    </nav>
+        <!-- <div class="search-bar">
+            <input type="text" placeholder="Search...">
+        </div> -->
+        <div class="account-cart">
+            <a href="cart" class="cart-icon"><i class="fas fa-shopping-bag"></i> My Cart</a>
+            <div class="account-dropdown">
+                <a href="/login" id="accountName" class="account-icon">
+                    <i class="fas fa-user"></i> Sign-In
+                </a>
+                <div id="accountMenu" class="dropdown-menu" style="display: none;">
+                    <a href="#" id="logoutBtn">Logout</a>
+                    <a href="#" id="deleteAccountBtn">Delete Account</a>
+                </div>
+            </div>
+        </div>
+        <button class="contact-btn">Contact Us</button>
+    </header>
+
+    <main class="register-container">
+        <div class="register-box">
+            <h1>Login</h1>
+            <form id="loginForm">
+                <label for="email">Email</label> <br>
+                <input type="email" id="email" name="email" required> <br>
+
+                <label for="password">Password</label> <br>
+                <input type="password" id="password" name="password" required> <br>
+
+                <button type="submit" class="register-btn">Login</button> <br>
+            </form>
+            <p>Don't have an account? <a href="/register">Register here</a></p>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Custom Figures. All rights reserved.</p>
+    </footer>
+
+    <script src="/script/login.js"></script>
+    <script src="/script/admin_check.js"></script>
+    <!-- <script src="/script/checkLogin.js"></script> -->
+    <!-- <script src="/script/DeleteLogout.js"></script> -->
+</body>
+</html>

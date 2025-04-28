@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Figures</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/team.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<!-- This is Navbar -->
+<body>
+    <div class="top-bar">Free Returns and Standard Shipping</div>
+    <header class="navbar"> <br>
+        <div class="logo"> <img src="assets/logo.png" alt="Logo" style="width: 100px; height: auto;"> </div> <br>
+        <nav id="navbar">
+                <ul>
+                    <li><a href="/home" class="active">Home</a></li>
+                    <li><a href="/shop">Shop</a></li>
+                    <li><a href="/customize">Customize</a></li>
+                    <li><a href="/FAQ">FAQ</a></li>
+                    <li><a href="/team">Team</a></li>
+                </ul>
+        </nav>
+        <!-- <div class="search-bar">
+            <input type="text" placeholder="Search...">
+        </div> -->
+        <div class="account-cart">
+            <a href="cart" class="cart-icon"><i class="fas fa-shopping-bag"></i> My Cart</a>
+            <div class="account-dropdown">
+                <a href="/login" id="accountName" class="account-icon">
+                    <i class="fas fa-user"></i> Sign-In
+                </a>
+                <div id="accountMenu" class="dropdown-menu" style="display: none;">
+                    <a href="#" id="logoutBtn">Logout</a>
+                    <a href="#" id="deleteAccountBtn">Delete Account</a>
+                </div>
+            </div>
+        </div>
+        <button class="contact-btn">Contact Us</button>
+    </header>
+
+    <section class="team-section">
+        <h2>Meet Our Team</h2>
+        <div class="team-row row-top">
+            <div class="member">
+                <img src="assets/member1.jpg" alt="Member 1">
+                <p>6688001 Pattareeya Achaiyaphoom</p>
+                <a href="https://www.instagram.com/pa__ac?igsh=enI0dDJld2V1eXps"><i class="fab fa-instagram"></i> pa__ac</a>
+            </div>
+            <div class="member">
+                <img src="assets/member2.jpg" alt="Member 2">
+                <p>6688013 Korawit Chantavilaiying</p>
+                <a href="https://www.facebook.com/korawit.chantavilaiying/"><i class="fab fa-facebook"></i> Korawit Chantavilaiying</a>
+            </div>
+            <div class="member">
+                <img src="assets/member3.jpg" alt="Member 3">
+                <p>6688021 Apinut Cotivongsa</p>
+                <a href="https://www.facebook.com/apinut.cotivongsa"><i class="fab fa-facebook"></i> Apinut Cotivongsa</a>
+            </div>
+        </div>
+        <div class="team-row row-bottom">
+            <div class="member">
+                <img src="assets/member4.jpg" alt="Member 4">
+                <p>6688032 Nipada Jadjaidee</p>
+                <a href="https://www.instagram.com/joar_hm?igsh=MTRtMHJpbnA2NGI3Mw=="><i class="fab fa-instagram"></i> Joarpark</a>
+            </div>
+            <div class="member">
+                <img src="assets/member5.jpg" alt="Member 5">
+                <p>6688157 Woraphol Meakapat</p>
+                <a href="https://www.facebook.com/Banishingth?mibextid=LQQJ4d"><i class="fab fa-facebook"></i> Banish Fluke  (Banish)</a>
+            </div>
+        </div>
+    </section>
+    
+
+    <footer>
+        <p>© 2025 Custom Figures. All rights reserved.</p>
+    </footer>
+    <script src="/script/checkLogin.js"></script>
+    <script src="/script/DeleteLogout.js"></script>
+    <script src="/script/admin_check.js"></script>
+</body>
+</html>

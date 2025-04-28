@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Figures</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/shop.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<!-- This is Navbar -->
+
+<body>
+    <div class="top-bar">Free Returns and Standard Shipping</div>
+    <header class="navbar"> 
+        <div class="logo"> <img src="/assets/logo.png" alt="Logo" style="width: 100px; height: auto;"> </div> 
+        <nav id="navbar">
+            <ul>
+                <li><a href="/home" class="active">Home</a></li>
+                <li><a href="/shop">Shop</a></li>
+                <li><a href="/customize">Customize</a></li>
+                <li><a href="/FAQ">FAQ</a></li>
+                <li><a href="/team">Team</a></li>
+            </ul>
+    </nav>
+       
+        <div class="account-cart">
+            <a href="cart" class="cart-icon"><i class="fas fa-shopping-bag"></i> My Cart</a>
+            <div class="account-dropdown">
+                <a href="/login" id="accountName" class="account-icon">
+                    <i class="fas fa-user"></i> Sign-In
+                </a>
+                <div id="accountMenu" class="dropdown-menu" style="display: none;">
+                    <a href="#" id="logoutBtn">Logout</a>
+                    <a href="#" id="deleteAccountBtn">Delete Account</a>
+                </div>
+            </div>
+        </div>
+        <button class="contact-btn">Contact Us</button>
+    </header>
+
+    <main class="shop-page">
+        <!-- Search and Advanced Search -->
+        <div class="shop-controls">
+            <div class="search-container">
+                <input type="text" class="product-search" id="product-search" placeholder="Search...">
+            </div>
+            <a href="/shop/search" class="advanced-search-btn">Advanced Search</a>
+        </div>
+        
+        <!-- Product Grid -->
+        <section id="product-grid" class="product-grid">
+            <!-- Products will be dynamically inserted here -->
+        </section>
+    
+    </main>
+
+    
+    <footer>
+        <p>© 2025 Custom Figures. All rights reserved.</p>
+    </footer>
+
+    <script src="/script/shop.js"></script>
+    <script src="/script/checkLogin.js"></script>
+    <script src="/script/DeleteLogout.js"></script>
+    <script src="/script/admin_check.js"></script>
+</body>
+</html>
+    

@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  background-color: #D9D9D9;
+}
+
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.register-box {
+  background-color: white;
+  padding: 40px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 600px;
+  text-align: left;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.register-box h1 {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 30px;
+  font-size: 26px;
+}
+
+.register-box label {
+  font-size: 14px;
+  font-weight: 500;
+  text-align: left;      /*Diff*/
+  margin-bottom: 10px;   /*Diff*/
+  display: block;
+}
+
+.register-box input {
+  width: 100%;
+  background-color: #eee;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.register-box button {
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.register-box button:hover {
+  background-color: #333;
+}
+
+.register-box p {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 13px;
+}
+
+.register-box a {
+  color: #333;
+  text-decoration: underline;
+}
+
+footer p {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group.small {
+  flex: 0.3;
+}
+
+/* input[type="text"], input[type="number"], input[type="email"], input[type="password"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+} */
+
+.top-bar,
+.navbar,
+.navbar ul li a,
+.search-bar input,
+.account-cart a,
+.contact-btn,
+.register-box a,
+.register-box label,
+.register-box input,
+.register-box p{
+    font-family: 'Poppins', sans-serif;
+}
+
+footer p {
+    font-family: 'Poppins', sans-serif;
+}
