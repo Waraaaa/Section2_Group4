@@ -56,11 +56,30 @@ npm start
 ## 🗂️ Project Structure
 
 ```Structure
-mainfolder/
-│
+672-projectphase2-sec2_group04-main/
+├── sec2_gr4_fe_src/
+│   └── html/                    #
+│       ├── assets/              #
+│       │   ├── products/        #
+│       │   │   └── ...
+│       │   └── ...
+│       └── ...
+├── sec2_gr4_ws_src/
+│   └── script/
+│       ├── server.js
+│       ├── client.js
+│       ├── package-lock.json
+│       ├── package.json
+│       ├── .env
+│       └── ...
 └── README.md
 ```
 - `file.name`: a.
+
+This is how the structure should look like before the usage.
+```
+
+```
 
 <br>
 
