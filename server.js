@@ -68,7 +68,7 @@ app.use(express.urlencoded({ extended: true }));  // To parse URL-encoded data
 
 // API endpoint to get all products
 app.get('/shop', (req, res) => {
-    db.query('SELECT DISTINCT p.SKU, pName, imgpath, price, pType FROM products p LEFT JOIN productionimage pi ON p.SKU = pi.SKU;', (err, results) => {
+    db.query(`SELECT DISTINCT p.SKU, pName, imgpath, price, pType FROM products p LEFT JOIN productionimage pi ON p.SKU = pi.SKU WHERE p.SKU != 'PRD00001'`, (err, results) => {
         if (err) {
             console.error(err);
             return res.status(500).json({ error: 'Database error' });
@@ -514,7 +514,7 @@ app.get('/check-admin', (req, res) => {
 
 
 app.get('/management', (req, res) => {
-    db.query('SELECT DISTINCT p.SKU, pName, imgpath, price, pType FROM products p LEFT JOIN productionimage pi ON p.SKU = pi.SKU;', (err, results) => {
+    db.query(`SELECT DISTINCT p.SKU, pName, imgpath, price, pType FROM products p LEFT JOIN productionimage pi ON p.SKU = pi.SKU WHERE p.SKU != 'PRD00001'`, (err, results) => {
         if (err) {
             console.error(err);
             return res.status(500).json({ error: 'Database error' });
