@@ -92,7 +92,7 @@ npm start
 └── README.md
 ```
 
-Although, this is how the structure should be before the usage.
+Although, this is how the structure should be before the usage:
 ```
 672-projectphase2-sec2_group04-main/
 ├── html/
@@ -110,6 +110,7 @@ Although, this is how the structure should be before the usage.
 ├── sec2_gr4_database.sql
 └── README.md
 ```
+Make sure every file is in the same directory, except the assets and products folders. 
 
 <br>
 
@@ -136,6 +137,4 @@ Apes Together Strong (section 2)
 ## 📄 License
 
 This project is for academic purposes only (Mahidol University).
-
-
 
