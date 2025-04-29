@@ -1,4 +1,4 @@
-# Section2_Group4 - Web Dev Project: Figuro.Co Website
+![image](https://github.com/user-attachments/assets/91c7e987-38e8-43d2-a06e-5fe3a56351be)# Section2_Group4 - Web Dev Project: Figuro.Co Website
 
 This repository is for a **Figuro.Co Website** project of **ITCS223: Introduction to Web Development** by **Apes Together Strong** group (section 2 group 4).
 
@@ -57,28 +57,42 @@ npm start
 
 ```Structure
 672-projectphase2-sec2_group04-main/
-├── sec2_gr4_fe_src/
-│   └── html/                    #
-│       ├── assets/              #
-│       │   ├── products/        #
+├── sec2_gr4_fe_src/          # All front-end source files, encompassing HTML, CSS, and supplementary files (e.g., images)
+│   └── html/                 # HTML and CSS files
+│       ├── assets/           # Images files
+│       │   ├── products/     # Product image files
 │       │   │   └── ...
 │       │   └── ...
 │       └── ...
-├── sec2_gr4_ws_src/
-│   └── script/
-│       ├── server.js
-│       ├── client.js
-│       ├── package-lock.json
-│       ├── package.json
-│       ├── .env
-│       └── ...
+├── sec2_gr4_ws_src/          # All web service source files
+│   ├── script/               # Javascript files
+│   │   └── ...
+│   ├── server.js             # Web service server
+│   ├── client.js             # Front-end server (client server)
+│   ├── package-lock.json
+│   ├── package.json
+│   └── .env
+├── sec4_gr4_database.sql     # Database (MySQL)
 └── README.md
 ```
-- `file.name`: a.
 
-This is how the structure should look like before the usage.
+Although, this is how the structure should be before the usage.
 ```
-
+672-projectphase2-sec2_group04-main/
+├── html/
+│   ├── assets/
+│   │   ├── products/
+│   │   │   └── ...
+│   │   └── ...
+│   └── ...
+├── server.js
+├── client.js
+├── package-lock.json
+├── package.json
+├── .env
+├── ...
+├── sec4_gr4_database.sql
+└── README.md
 ```
 
 <br>
