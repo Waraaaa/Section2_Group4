@@ -1,10 +1,10 @@
 CREATE DATABASE  IF NOT EXISTS `figuro` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
 USE `figuro`;
--- MySQL dump 10.13  Distrib 8.0.40, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.38, for Win64 (x86_64)
 --
 -- Host: localhost    Database: figuro
 -- ------------------------------------------------------
--- Server version	8.0.40
+-- Server version	8.0.39
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -62,16 +62,14 @@ DROP TABLE IF EXISTS `cart`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `cart` (
-  `cartID` int NOT NULL AUTO_INCREMENT,
   `accID` int NOT NULL,
-  `totalPrice` decimal(10,2) DEFAULT NULL,
-  `createdDT` datetime DEFAULT CURRENT_TIMESTAMP,
-  `updatedDT` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `status` enum('Active','Abandoned','Completed') DEFAULT 'Active',
-  PRIMARY KEY (`cartID`),
-  KEY `accID` (`accID`),
-  CONSTRAINT `cart_ibfk_1` FOREIGN KEY (`accID`) REFERENCES `accounts` (`accID`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `SKU` char(8) NOT NULL,
+  `quantity` int NOT NULL DEFAULT '1',
+  PRIMARY KEY (`accID`,`SKU`),
+  KEY `SKU` (`SKU`),
+  CONSTRAINT `cart_ibfk_1` FOREIGN KEY (`accID`) REFERENCES `accounts` (`accID`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `cart_ibfk_2` FOREIGN KEY (`SKU`) REFERENCES `products` (`SKU`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -80,41 +78,8 @@ CREATE TABLE `cart` (
 
 LOCK TABLES `cart` WRITE;
 /*!40000 ALTER TABLE `cart` DISABLE KEYS */;
-INSERT INTO `cart` VALUES (1,2,400.00,'2025-04-29 12:13:48','2025-04-29 12:13:48','Completed'),(2,6,350.00,'2025-04-29 12:13:48','2025-04-29 12:13:48','Completed'),(3,4,220.00,'2025-04-29 12:13:48','2025-04-29 12:13:48','Completed'),(4,5,150.00,'2025-04-29 12:13:48','2025-04-29 12:13:48','Completed'),(5,7,315.00,'2025-04-29 12:13:48','2025-04-29 12:13:48','Completed'),(6,3,150.00,'2025-04-29 12:13:48','2025-04-29 12:13:48','Abandoned'),(7,8,400.00,'2025-04-29 12:13:48','2025-04-29 12:13:48','Abandoned'),(8,9,65.00,'2025-04-29 12:13:48','2025-04-29 12:13:48','Abandoned'),(9,10,300.00,'2025-04-29 12:13:48','2025-04-29 12:13:48','Active'),(10,5,350.00,'2025-04-29 12:13:48','2025-04-29 12:13:48','Active');
+INSERT INTO `cart` VALUES (1,'PRD00002',1),(1,'PRD00003',3),(1,'PRD00004',1),(1,'PRD00005',1),(1,'PRD00006',1),(1,'PRD00007',1),(1,'PRD00008',1),(1,'PRD00009',1),(1,'PRD00010',1),(1,'PRD00011',1);
 /*!40000 ALTER TABLE `cart` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `cart_items`
---
-
-DROP TABLE IF EXISTS `cart_items`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `cart_items` (
-  `cartItemID` int NOT NULL AUTO_INCREMENT,
-  `cartID` int NOT NULL,
-  `SKU` char(8) NOT NULL,
-  `quantity` int DEFAULT '1',
-  `price` decimal(10,2) NOT NULL,
-  `createdDT` datetime DEFAULT CURRENT_TIMESTAMP,
-  `updatedDT` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`cartItemID`),
-  KEY `cartID` (`cartID`),
-  KEY `SKU` (`SKU`),
-  CONSTRAINT `cart_items_ibfk_1` FOREIGN KEY (`cartID`) REFERENCES `cart` (`cartID`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `cart_items_ibfk_2` FOREIGN KEY (`SKU`) REFERENCES `products` (`SKU`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `cart_items`
---
-
-LOCK TABLES `cart_items` WRITE;
-/*!40000 ALTER TABLE `cart_items` DISABLE KEYS */;
-INSERT INTO `cart_items` VALUES (1,1,'PRD00002',1,200.00,'2025-04-29 12:13:48','2025-04-29 12:13:48'),(2,1,'PRD00003',1,200.00,'2025-04-29 12:13:48','2025-04-29 12:13:48'),(3,2,'PRD00011',1,350.00,'2025-04-29 12:13:48','2025-04-29 12:13:48'),(4,3,'PRD00010',1,220.00,'2025-04-29 12:13:48','2025-04-29 12:13:48'),(5,4,'PRD00005',1,150.00,'2025-04-29 12:13:48','2025-04-29 12:13:48'),(6,5,'PRD00008',1,250.00,'2025-04-29 12:13:48','2025-04-29 12:13:48'),(7,5,'PRD00009',1,65.00,'2025-04-29 12:13:48','2025-04-29 12:13:48'),(8,9,'PRD00005',1,150.00,'2025-04-29 12:13:48','2025-04-29 12:13:48'),(9,9,'PRD00004',1,150.00,'2025-04-29 12:13:48','2025-04-29 12:13:48'),(10,10,'PRD00011',1,350.00,'2025-04-29 12:13:48','2025-04-29 12:13:48');
-/*!40000 ALTER TABLE `cart_items` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -281,7 +246,7 @@ CREATE TABLE `productionimage` (
   PRIMARY KEY (`imgID`),
   KEY `SKU` (`SKU`),
   CONSTRAINT `productionimage_ibfk_1` FOREIGN KEY (`SKU`) REFERENCES `products` (`SKU`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -380,4 +345,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-04-29 19:14:59
+-- Dump completed on 2025-04-29 21:28:51
