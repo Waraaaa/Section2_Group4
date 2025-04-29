@@ -72,7 +72,7 @@ npm start
 │   ├── package-lock.json
 │   ├── package.json
 │   └── .env
-├── sec4_gr4_database.sql     # Database (MySQL)
+├── sec2_gr4_database.sql     # Database (MySQL)
 └── README.md
 ```
 
@@ -91,7 +91,7 @@ Although, this is how the structure should be before the usage.
 ├── package.json
 ├── .env
 ├── ...
-├── sec4_gr4_database.sql
+├── sec2_gr4_database.sql
 └── README.md
 ```
 
