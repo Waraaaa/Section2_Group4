@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/91c7e987-38e8-43d2-a06e-5fe3a56351be)# Section2_Group4 - Web Dev Project: Figuro.Co Website
+# Section2_Group4 - Web Dev Project: Figuro.Co Website
 
 This repository is for a **Figuro.Co Website** project of **ITCS223: Introduction to Web Development** by **Apes Together Strong** group (section 2 group 4).
 
