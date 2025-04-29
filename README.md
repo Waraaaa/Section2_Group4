@@ -32,12 +32,11 @@ Figuro
 
 ## ⚙️ Installation
 
-```
-# PLEASE USE COMMAND PROMPT AND NOT POWERSHELL
+❗Please use **COMMAND PROMPT** and **NOT POWERSHELL**❗
 
+```
 # Required module that need to be installed
 > npm install concurrently
-
 ```
 
 <br>
