@@ -1,4 +1,4 @@
-# Section2_Group4 - Web Dev Project: Figuro.Co Website
+# Web Dev Project: Figuro.Co Website (Section2_Group4)
 
 This repository is for a **Figuro.Co Website** project of **ITCS223: Introduction to Web Development** by **Apes Together Strong** group (section 2 group 4).
 
