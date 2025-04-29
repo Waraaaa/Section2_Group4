@@ -19,14 +19,16 @@ This repository is for a **Figuro.Co Website** project of **ITCS223: Introductio
 
 ## 📖 About
 
-Figuro
+This project, Figuro.Co Website, is a custom art toy e-commerce website that allows customers to browse premade products, submit customization requests, and track their personalized orders. 
 
 <br>
 
 ## ✨ Features
 
-- **Disk Usage Analysis:** a
-- 
+- **Premade Product Shopping:** Browse a catalog of available art toys, add items to a shopping cart, and complete purchases.
+- **Customization Request System:** Customer can request custom designs by filling out detailed forms and uploading reference images.
+- **Staff Tools:** Authorized staff can manage products.
+- **Search Functionality:** A search tool allows users and staff to quickly locate specific products by query.
 
 <br>
 
