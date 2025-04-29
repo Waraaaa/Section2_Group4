@@ -36,7 +36,23 @@ Figuro
 
 ```
 # Required module that need to be installed
-> npm install concurrently
+npm install
+do
+    cookie-parser
+    cors
+    dotenv
+    express
+    multer"
+    mysql2
+    nodemon
+    concurrently
+
+# Also make changes in the 'script' section to:
+  "scripts": {
+    "start": "concurrently "npm run front" "npm run back"",
+    "front": "nodemon client.js",
+    "back": "nodemon server.js"
+  }
 ```
 
 <br>
